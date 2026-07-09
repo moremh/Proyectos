@@ -1,0 +1,24 @@
+# Calculadora IMC NutriFit Pro 🍎
+
+Una aplicación web moderna para calcular el Índice de Masa Corporal (IMC) y estimar tus necesidades calóricas diarias, basada en un diseño profesional y funcional.
+
+## Características
+* **Cálculos en tiempo real:** IMC basado en peso y altura.
+* **Historial de registros:** Guarda tus resultados recientes usando `localStorage`.
+* **Modo Oscuro/Claro:** Interfaz adaptable a tus preferencias.
+* **Tips Personalizados:** Consejos de salud dinámicos según tu resultado.
+
+## Tecnologías
+- **HTML5:** Estructura semántica.
+- **CSS3:** Diseño responsivo con variables y flexbox.
+- **JavaScript (ES6+):** Lógica de cálculo y manipulación del DOM.
+
+## Cómo ejecutarlo
+1. Clona este repositorio o descarga la carpeta.
+2. Abre el archivo `index.html` en cualquier navegador web moderno (Chrome, Firefox, Edge).
+3. ¡No requiere instalación!
+
+## Visualización del Proyecto
+![NutriFit Pro](/Calculadora-IMC/img/1.png)
+(/Calculadora-IMC/img/2.png)
+*(Nota: Puedes reemplazar el link de arriba con una captura de pantalla de tu app).*
