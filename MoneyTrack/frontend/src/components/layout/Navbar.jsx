@@ -1,14 +1,17 @@
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark bg-primary px-4">
-      <span className="navbar-brand mb-0 h1">
-        💸 MoneyTrack
-      </span>
-
-      <div className="text-white">
-        Hola, More 👋
-      </div>
-    </nav>
+    <header
+      style={{
+        height: "70px",
+        borderBottom: "1px solid #ddd",
+        display: "flex",
+        alignItems: "center",
+        padding: "0 25px",
+        background: "#fff"
+      }}
+    >
+      <h3>💸 MoneyTrack</h3>
+    </header>
   );
 }
 

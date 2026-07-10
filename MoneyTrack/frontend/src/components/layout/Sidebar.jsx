@@ -1,39 +1,25 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
   return (
-    <div
-      className="bg-white border-end p-3"
-      style={{ width: "250px", minHeight: "100vh" }}
+    <aside
+      style={{
+        width: "220px",
+        minHeight: "calc(100vh - 70px)",
+        borderRight: "1px solid #ddd",
+        padding: "20px"
+      }}
     >
-      <h5 className="mb-4">Menú</h5>
-
-      <ul className="nav flex-column">
-
-        <li className="nav-item mb-2">
-          <a href="#" className="nav-link">
-            📊 Dashboard
-          </a>
-        </li>
-
-        <li className="nav-item mb-2">
-          <a href="#" className="nav-link">
-            💰 Ingresos
-          </a>
-        </li>
-
-        <li className="nav-item mb-2">
-          <a href="#" className="nav-link">
-            💸 Gastos
-          </a>
-        </li>
-
-        <li className="nav-item mb-2">
-          <a href="#" className="nav-link">
-            📈 Reportes
-          </a>
-        </li>
-
-      </ul>
-    </div>
+      <nav>
+        <p><Link to="/">Dashboard</Link></p>
+        <p><Link to="/income">Ingresos</Link></p>
+        <p><Link to="/expenses">Gastos</Link></p>
+        <p><Link to="/categories">Categorías</Link></p>
+        <p><Link to="/goals">Objetivos</Link></p>
+        <p><Link to="/reports">Reportes</Link></p>
+        <p><Link to="/settings">Configuración</Link></p>
+      </nav>
+    </aside>
   );
 }
 

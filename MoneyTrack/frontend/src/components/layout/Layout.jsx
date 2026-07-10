@@ -1,19 +1,16 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <Navbar />
-
-      <div className="d-flex">
-
+      <div style={{ display: "flex" }}>
         <Sidebar />
-
-        <main className="flex-grow-1 p-4 bg-light">
-          {children}
+        <main style={{ flex: 1, padding: "20px" }}>
+          <Outlet />
         </main>
-
       </div>
     </>
   );

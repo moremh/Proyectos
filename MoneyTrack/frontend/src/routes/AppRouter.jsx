@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Layout from "../components/layout/Layout";
+
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Income from "../pages/Income/Income";
 import Expenses from "../pages/Expenses/Expenses";
@@ -14,15 +16,20 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        {/* Rutas públicas */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/income" element={<Income />} />
-        <Route path="/expenses" element={<Expenses />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/goals" element={<Goals />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/settings" element={<Settings />} />
+
+        {/* Rutas con Layout */}
+        <Route element={<Layout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/income" element={<Income />} />
+          <Route path="/expenses" element={<Expenses />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

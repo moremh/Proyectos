@@ -1,15 +1,7 @@
-import Layout from "./components/layout/Layout";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
-  return (
-    <Layout>
-      <h2>Dashboard</h2>
-
-      <p>
-        Bienvenido a MoneyTrack.
-      </p>
-    </Layout>
-  );
+  return <AppRouter />;
 }
 
 export default App;
