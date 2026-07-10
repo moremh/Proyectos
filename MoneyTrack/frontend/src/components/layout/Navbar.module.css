@@ -1,0 +1,53 @@
+.navbar {
+  height: 70px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuButton {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: color .2s;
+}
+
+.icon:hover {
+  color: var(--color-primary);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}

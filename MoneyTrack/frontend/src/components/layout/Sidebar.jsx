@@ -1,24 +1,51 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styles from "./Sidebar.module.css";
+import sidebarMenu from "../../data/sidebarMenu";
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   return (
     <aside
-      style={{
-        width: "220px",
-        minHeight: "calc(100vh - 70px)",
-        borderRight: "1px solid #ddd",
-        padding: "20px"
-      }}
+      className={`${styles.sidebar} ${
+        !isOpen ? styles.sidebarCollapsed : ""
+    }`}
     >
-      <nav>
-        <p><Link to="/">Dashboard</Link></p>
-        <p><Link to="/income">Ingresos</Link></p>
-        <p><Link to="/expenses">Gastos</Link></p>
-        <p><Link to="/categories">Categorías</Link></p>
-        <p><Link to="/goals">Objetivos</Link></p>
-        <p><Link to="/reports">Reportes</Link></p>
-        <p><Link to="/settings">Configuración</Link></p>
-      </nav>
+      <div>
+        <div className={styles.logo}>
+          <i className="bi bi-wallet2 fs-3"></i>
+
+          {isOpen && <h2>MoneyTrack</h2>}
+        </div>
+
+        <nav className={styles.nav}>
+          {sidebarMenu.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              <i className={item.icon}></i>
+
+              {isOpen && item.title}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+
+      <div className={styles.footer}>
+        <div className={styles.user}>
+          👤
+
+          {isOpen && " More"}
+        </div>
+
+        {isOpen && (
+          <div className={styles.role}>
+            Usuario
+        </div>
+        )}
+      </div>
     </aside>
   );
 }

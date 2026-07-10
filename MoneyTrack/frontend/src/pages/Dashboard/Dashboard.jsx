@@ -1,5 +1,6 @@
 import styles from "./Dashboard.module.css";
 import StatCard from "../../components/dashboard/StatCard";
+import BalanceChart from "../../components/dashboard/BalanceChart";
 
 function Dashboard() {
   return (
@@ -39,6 +40,8 @@ function Dashboard() {
     color="#f59e0b"
   />
 </div>
+
+      <BalanceChart />
     </div>
   );
 }
