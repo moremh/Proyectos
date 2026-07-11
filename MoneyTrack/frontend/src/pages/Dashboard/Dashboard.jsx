@@ -1,16 +1,21 @@
 import styles from "./Dashboard.module.css";
-import StatCard from "../../components/dashboard/StatCard";
-import BalanceChart from "../../components/dashboard/BalanceChart";
+import StatCard from "../../components/dashboard/StatCard/StatCard";
+import BalanceChart from "../../components/dashboard/BalanceChart/BalanceChart";
+import RecentTransactions from "../../components/dashboard/RecentTransactions/RecentTransactions";
+import ExpenseCategories from "../../components/dashboard/ExpenseCategories/ExpenseCategories";
 
 function Dashboard() {
   return (
     <div className={styles.dashboard}>
-      <h1 className={styles.title}>Bienvenido, More 👋</h1>
+        <div className={styles.header}>
+            <h1 className={styles.title}>
+                Bienvenido, More 👋
+            </h1>
 
-      <p className={styles.subtitle}>
-        Controla tus ingresos, gastos y objetivos financieros desde un solo lugar.
-      </p>
-
+            <p className={styles.subtitle}>
+                Aquí tienes un resumen actualizado de tu actividad financiera.
+            </p>
+        </div>
       <div className={styles.cardsGrid}>
   <StatCard
     title="Saldo Total"
@@ -40,8 +45,19 @@ function Dashboard() {
     color="#f59e0b"
   />
 </div>
+    <section className={styles.chartSection}>
+        <h2 className={styles.chartTitle}>
+            Balance mensual
+        </h2>
 
-      <BalanceChart />
+        <BalanceChart />
+    </section>
+
+        <div className={styles.bottomGrid}>
+            <RecentTransactions />
+
+            <ExpenseCategories />
+        </div>
     </div>
   );
 }

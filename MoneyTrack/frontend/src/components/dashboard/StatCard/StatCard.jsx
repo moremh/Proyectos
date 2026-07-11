@@ -2,7 +2,10 @@ import styles from "./StatCard.module.css";
 
 function StatCard({ title, value, icon, color }) {
   return (
-    <div className={styles.card}>
+    <div
+  className={styles.card}
+  style={{ borderTop: `5px solid ${color}` }}
+>
       <div className={styles.top}>
         <span
           className={styles.icon}

@@ -4,7 +4,8 @@
 
 .content {
   flex: 1;
-  padding: 24px;
-  background-color: var(--background);
+  padding: 32px;
+  background: #f8fafc;
+  transition: all .3s ease;
   min-height: calc(100vh - 70px);
 }
